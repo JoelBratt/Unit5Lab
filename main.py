@@ -23,7 +23,7 @@ class WordAnalyzer:
             #encoding to prevent errors and "r" for read mode
             with self.__filepath.open('r', encoding='utf-8') as file:
                 
-                extended_punctuation = string.punctuation
+                extended_punctuation = string.punctuation + '“”‘’'
                 translator = str.maketrans('', '', extended_punctuation)
                 
                 for line in file:
