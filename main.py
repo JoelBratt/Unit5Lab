@@ -41,6 +41,12 @@ class WordAnalyzer:
             # deals with file not being there
             print(f"Error: Could not find '{self.__filepath.name}'.")
             return False
+    def print_report(self):
+        # alphabetical sort for the words
+        sorted_words = sorted(self.__frequencies.keys())
+        for word in sorted_words:
+            # sperates the word from the :
+            print(f"{word:<10} :: {self.__frequencies[word]}")
 
 
 
